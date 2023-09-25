@@ -1,4 +1,5 @@
 <html>
+<div id="htmlContent">
  <body style="background-color:light cyan">
    <style>
    .h1{
@@ -12,7 +13,7 @@
    <h4 style="color:white">8778936725</h4>
     <h3 style="color:white">Gmail</h3>
    <h4 style="color:white">priyadharshinims23@gmail.com</h4>
-    <h4 style="color:white">priyadharshinim.cs21@kascsathy.ac.in</h4>
+ 
    <h3 style="color:white">GitHub</h3>
    <a href="https://github.com/priyadharshinim-cs-21">https://github.com/priyadharshinim-cs-21</a></div>
     
@@ -81,7 +82,7 @@
     color="black">
     <h4> Full-Stack Developer</h5>
   
-    <h3 style="color:blue">PROGRAMING SKILLS</h3>
+    <h3 style="color:blue">SKILLS</h3>
     <hr width="100%"
    size="1"
     color="black">
@@ -137,4 +138,24 @@
     color="black">
      <h4>I hereby declare that all the information given above is true and correct to the best of my knowledge.</h4>
   </body>
+
+   <div id="editor"></div>
+<center>
+<p>
+   <button onclick="printDiv('htmlContent')">Print / Save Pdf</button>
+</p>
+</center>
+<script type="text/javascript">
+
+function printDiv(div_id) 
+    	{
+
+ var divToPrint=document.getElementById(div_id);
+    	  var newWin=window.open('','Print-Window');
+	newWin.document.open();
+	newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+    	  newWin.document.close();
+       setTimeout(function() { newWin.close();},10);
+	}
+</script>
     </html>
